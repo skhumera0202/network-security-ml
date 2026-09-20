@@ -13,7 +13,7 @@ The pipeline includes:
 - Data Transformation
 - Model Training
 - Model Evaluation
-- Training Pipeline
+- Prediction Pipeline
 
 The project is structured as a modular Python package so that each stage of the ML workflow can be developed and tested separately.
 
@@ -31,15 +31,41 @@ The dataset contains features related to URLs and website characteristics, inclu
 - Page rank
 - Google indexing
 - DNS records
-- And other security-related features
+- Other security-related features
 
-The target column is:
+The target column is `Result`.
 
-`Result`
+## Technologies Used
 
-## Project Structure
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Joblib
+- PyYAML
+- Git
+- GitHub
+
+## ML Pipeline
 
 ```text
+Dataset
+   ↓
+Data Ingestion
+   ↓
+Data Validation
+   ↓
+Data Transformation
+   ↓
+Model Training
+   ↓
+Model Evaluation
+   ↓
+Trained Model
+   ↓
+Prediction
+
+Project Structure
 network-security-ml/
 │
 ├── data/
@@ -57,7 +83,6 @@ network-security-ml/
 │       │   ├── data_transformation.py
 │       │   ├── model_trainer.py
 │       │   └── model_evaluation.py
-│       │
 │       ├── constant/
 │       ├── entity/
 │       ├── exception/
@@ -70,3 +95,10 @@ network-security-ml/
 ├── setup.py
 ├── .gitignore
 └── README.md
+Model Performance
+
+The trained model achieved:
+
+Test Accuracy: 96.70%
+
+The model was accepted during the model evaluation stage.
