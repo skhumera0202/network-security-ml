@@ -102,3 +102,61 @@ The trained model achieved:
 Test Accuracy: 96.70%
 
 The model was accepted during the model evaluation stage.
+
+## How to Run
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/skhumera0202/network-security-ml.git
+cd network-security-ml
+   
+   2. Create a virtual environment
+       
+    python -m venv venv
+ 
+   3. Activate the Virtual Environment
+
+    For Windows PowerShell:
+      venv\Scripts\activate
+
+   4. Install Dependencies
+       pip install -r requirements.txt
+
+   5. Install the Project
+      pip install -e .
+
+   6. Run the Training Pipeline
+      python -m networksecurity.pipeline.training
+        
+   7. Run the Prediction Pipeline
+      python -m networksecurity.pipeline.prediction
+
+   8. Run the Web Application
+      python app.py
+
+Then open the following URL in your browser:
+
+http://127.0.0.1:5000
+
+
+### 2. Which commands do **you** need to run?
+
+**Right now: NONE of steps 2–5.** ✅
+
+You already did them while building the project.
+
+The commands are written in the README so that **someone cloning your GitHub project can follow them on their own computer**.
+
+The only commands you would normally run when you want to use your existing project are:
+
+```powershell
+python -m networksecurity.pipeline.training
+ 
+ or:
+
+python -m networksecurity.pipeline.prediction
+
+or, for the website:
+
+python app.py
