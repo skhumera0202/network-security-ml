@@ -11,12 +11,11 @@ class NetworkSecurityPredictor:
 
     def predict(self, input_data):
 
-        if isinstance(input_data, dict):
-            input_data = pd.DataFrame([input_data])
+      if isinstance(input_data, dict):
+        input_data = pd.DataFrame([input_data]).values
+      prediction = self.model.predict(input_data)
 
-        prediction = self.model.predict(input_data)
-
-        return prediction[0]
+      return prediction[0]
 
 
 if __name__ == "__main__":
