@@ -1,177 +1,16 @@
 # Network Security ML
 
-A Machine Learning project for detecting phishing websites using URL and website-related security features.
+## 1. Project Overview
 
-## Project Overview
+Network Security ML is a machine learning project designed to classify websites as **legitimate or phishing** based on website-related security features.
 
-This project implements an end-to-end Machine Learning pipeline for phishing website detection.
+The project includes a complete machine learning pipeline for data ingestion, validation, transformation, model training, evaluation, and prediction.
 
-The pipeline includes:
+It also provides an interactive **Flask web application** where users can enter website feature values and receive a prediction.
 
-- Data Ingestion
-- Data Validation
-- Data Transformation
-- Model Training
-- Model Evaluation
-- Prediction Pipeline
+---
 
-The project is structured as a modular Python package so that each stage of the ML workflow can be developed and tested separately.
-
-## Dataset
-
-The dataset contains features related to URLs and website characteristics, including:
-
-- IP address usage
-- URL length
-- URL shortening services
-- HTTPS
-- SSL state
-- Subdomains
-- Website traffic
-- Page rank
-- Google indexing
-- DNS records
-- Other security-related features
-
-The target column is `Result`.
-
-## Technologies Used
-
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Joblib
-- PyYAML
-- Git
-- GitHub
-
-## ML Pipeline
-
-```text
-Dataset
-   ↓
-Data Ingestion
-   ↓
-Data Validation
-   ↓
-Data Transformation
-   ↓
-Model Training
-   ↓
-Model Evaluation
-   ↓
-Trained Model
-   ↓
-Prediction
-
-Project Structure
-network-security-ml/
-│
-├── data/
-│   └── phisingData.csv
-│
-├── data_schema/
-│   └── schema.yaml
-│
-├── src/
-│   └── networksecurity/
-│       ├── cloud/
-│       ├── components/
-│       │   ├── data_ingestion.py
-│       │   ├── data_validation.py
-│       │   ├── data_transformation.py
-│       │   ├── model_trainer.py
-│       │   └── model_evaluation.py
-│       ├── constant/
-│       ├── entity/
-│       ├── exception/
-│       ├── logging/
-│       └── pipeline/
-│           ├── training.py
-│           └── prediction.py
-│
-├── requirements.txt
-├── setup.py
-├── .gitignore
-└── README.md
-Model Performance
-
-The trained model achieved:
-
-Test Accuracy: 96.70%
-
-The model was accepted during the model evaluation stage.
-
-## How to Run
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/skhumera0202/network-security-ml.git
-cd network-security-ml
-   
-   2. Create a virtual environment
-       
-    python -m venv venv
- 
-   3. Activate the Virtual Environment
-
-    For Windows PowerShell:
-      venv\Scripts\activate
-
-   4. Install Dependencies
-       pip install -r requirements.txt
-
-   5. Install the Project
-      pip install -e .
-
-   6. Run the Training Pipeline
-      python -m networksecurity.pipeline.training
-        
-   7. Run the Prediction Pipeline
-      python -m networksecurity.pipeline.prediction
-
-   8. Run the Web Application
-      python app.py
-
-Then open the following URL in your browser:
-
-http://127.0.0.1:5000
-
-
-### 2. Which commands do **you** need to run?
-
-**Right now: NONE of steps 2–5.** ✅
-
-You already did them while building the project.
-
-The commands are written in the README so that **someone cloning your GitHub project can follow them on their own computer**.
-
-The only commands you would normally run when you want to use your existing project are:
-
-```powershell
-python -m networksecurity.pipeline.training
- 
- or:
-
-python -m networksecurity.pipeline.prediction
-
-or, for the website:
-
-python app.py
-
-## Web Application
-
-### Web Interface
-
-![Network Security ML Web Interface](screenshots/web-interface.png)
-
-### Prediction Result
-
-![Prediction Result](screenshots/prediction-result.png)
-
-## Tech Stack
+## 2. Tech Stack
 
 - **Python**
 - **Pandas** – Data processing
@@ -182,3 +21,175 @@ python app.py
 - **PyYAML** – Configuration management
 - **Joblib** – Model saving and loading
 - **Git & GitHub** – Version control
+
+---
+
+## 3. Key Features
+
+- Detects whether a website is likely to be legitimate or phishing.
+- Uses 30 website-related security features for prediction.
+- Includes data validation and preprocessing pipelines.
+- Trains and evaluates a machine learning classification model.
+- Saves the trained model for later predictions.
+- Provides an interactive Flask web interface.
+- Supports command-line and web-based predictions.
+- Includes reproducible project setup using Git and GitHub.
+
+---
+
+## 4. Machine Learning Model
+
+The project uses a **Random Forest Classifier** for website classification.
+
+The model learns patterns from website-related security features and predicts the classification of a website.
+
+### Model Performance
+
+- **Test Accuracy:** 96.70%
+- **Task:** Binary Classification
+- **Prediction:** Legitimate Website / Phishing Website
+
+---
+
+## 5. Project Structure
+
+```text
+network-security-ml/
+│
+├── src/
+│   └── networksecurity/
+│       ├── components/
+│       ├── pipeline/
+│       ├── entity/
+│       ├── configuration/
+│       └── utils/
+│
+├── data_schema/
+│   └── schema.yaml
+│
+├── templates/
+│   └── index.html
+│
+├── screenshots/
+│   ├── web-interface.png
+│   └── prediction-result.png
+│
+├── Artifacts/
+├── app.py
+├── setup.py
+├── requirements.txt
+└── README.md
+
+## 6. How It Works
+
+The project follows a machine learning pipeline:
+
+1. **Data Ingestion** – Loads the website dataset.
+2. **Data Validation** – Validates the dataset using the defined schema.
+3. **Data Transformation** – Prepares the data for machine learning.
+4. **Model Training** – Trains the Random Forest classification model.
+5. **Model Evaluation** – Evaluates the trained model using test data.
+6. **Prediction** – Uses the trained model to classify website features.
+7. **Web Interface** – Provides a Flask-based interface for interactive predictions.
+
+---
+
+## 7. Prediction
+
+The application accepts website-related feature values.
+
+Allowed values are:
+
+-1, 0, or 1
+
+The model then produces a prediction.
+
+Example:
+
+Prediction: 1
+Result: Legitimate website
+
+The web application provides the same prediction functionality through an interactive interface.
+
+---
+
+## 8. Web Application
+
+The project includes a Flask-based web interface for entering website features and generating predictions.
+
+### Web Interface
+
+![Network Security ML Web Interface](screenshots/web-interface.png)
+
+### Prediction Result
+
+![Prediction Result](screenshots/prediction-result.png)
+
+---
+
+## 9. Future Improvements
+
+- Improve model performance through additional feature engineering.
+- Experiment with other machine learning algorithms.
+- Add more comprehensive model evaluation metrics.
+- Deploy the Flask application online.
+- Add automated testing.
+- Improve input validation and user interface design.
+
+---
+
+## 10. Learning Outcomes
+
+Through this project, I practiced:
+
+- Python programming
+- Machine learning workflows
+- Data preprocessing and validation
+- Model training and evaluation
+- Flask web development
+- Git and GitHub version control
+- Project structuring
+- Reproducible project setup
+
+---
+
+## 11. Installation and Usage
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/skhumera0202/network-security-ml.git
+cd network-security-ml
+
+Create a Virtual Environment:
+python -m venv venv
+
+Activate the Virtual Environment:
+Windows PowerShell:
+
+.\venv\Scripts\Activate.ps1
+
+Install Dependencies:
+pip install -r requirements.txt
+
+Install the Project:
+pip install -e .
+
+Run the Training Pipeline:
+python -m networksecurity.pipeline.training
+
+Run the Prediction Pipeline:
+python -m networksecurity.pipeline.prediction
+
+Run the Flask Web Application:
+python app.py
+
+Then open:
+
+http://127.0.0.1:5000
+
+## 12. Author
+
+**Humera Shaikh**
+
+GitHub: https://github.com/skhumera0202
