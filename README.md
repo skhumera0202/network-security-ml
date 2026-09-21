@@ -53,7 +53,6 @@ The model learns patterns from website-related security features and predicts th
 
 ## 5. Project Structure
 
-```text
 network-security-ml/
 │
 ├── src/
@@ -80,7 +79,7 @@ network-security-ml/
 ├── requirements.txt
 └── README.md
 
-## 6. How It Works
+## 6.How It Works
 
 The project follows a machine learning pipeline:
 
@@ -157,7 +156,6 @@ Through this project, I practiced:
 
 ### Clone the Repository
 
-```bash
 git clone https://github.com/skhumera0202/network-security-ml.git
 cd network-security-ml
 
