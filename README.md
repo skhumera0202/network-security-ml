@@ -97,16 +97,16 @@ The project follows a machine learning pipeline:
 
 The application accepts website-related feature values.
 
-Allowed values are:
+**Allowed values are:**
 
 -1, 0, or 1
 
 The model then produces a prediction.
 
-Example:
+**Example:**
 
-Prediction: 1
-Result: Legitimate website
+**Prediction:** 1
+**Result:** Legitimate website
 
 The web application provides the same prediction functionality through an interactive interface.
 
@@ -139,7 +139,7 @@ The project includes a Flask-based web interface for entering website features a
 
 ## 10. Learning Outcomes
 
-Through this project, I practiced:
+**Through this project, I practiced**:
 
 - Python programming
 - Machine learning workflows
@@ -159,30 +159,36 @@ Through this project, I practiced:
 git clone https://github.com/skhumera0202/network-security-ml.git
 cd network-security-ml
 
-Create a Virtual Environment:
+**Create a Virtual Environment:**
+
 python -m venv venv
 
-Activate the Virtual Environment:
-Windows PowerShell:
+**Activate the Virtual Environment:**
+ **Windows PowerShell:**
 
 .\venv\Scripts\Activate.ps1
 
-Install Dependencies:
+**Install Dependencies:**
+
 pip install -r requirements.txt
 
-Install the Project:
+**Install the Project:**
+
 pip install -e .
 
-Run the Training Pipeline:
+**Run the Training Pipeline:**
+
 python -m networksecurity.pipeline.training
 
-Run the Prediction Pipeline:
+**Run the Prediction Pipeline:**
+
 python -m networksecurity.pipeline.prediction
 
-Run the Flask Web Application:
+**Run the Flask Web Application:**
+
 python app.py
 
-Then open:
+**Then open:**
 
 http://127.0.0.1:5000
 
