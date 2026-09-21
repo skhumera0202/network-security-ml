@@ -170,3 +170,15 @@ python app.py
 ### Prediction Result
 
 ![Prediction Result](screenshots/prediction-result.png)
+
+## Tech Stack
+
+- **Python**
+- **Pandas** – Data processing
+- **NumPy** – Numerical operations
+- **Scikit-learn** – Machine learning
+- **Random Forest Classifier** – Classification model
+- **Flask** – Web application
+- **PyYAML** – Configuration management
+- **Joblib** – Model saving and loading
+- **Git & GitHub** – Version control
