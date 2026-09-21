@@ -160,3 +160,13 @@ python -m networksecurity.pipeline.prediction
 or, for the website:
 
 python app.py
+
+## Web Application
+
+### Web Interface
+
+![Network Security ML Web Interface](screenshots/web-interface.png)
+
+### Prediction Result
+
+![Prediction Result](screenshots/prediction-result.png)
