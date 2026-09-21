@@ -53,6 +53,7 @@ The model learns patterns from website-related security features and predicts th
 
 ## 5. Project Structure
 
+```text
 network-security-ml/
 │
 ├── src/
@@ -78,10 +79,10 @@ network-security-ml/
 ├── setup.py
 ├── requirements.txt
 └── README.md
+```
+## 6. How It Works
 
-## 6.How It Works
-
-The project follows a machine learning pipeline:
+**The project follows a machine learning pipeline:**
 
 1. **Data Ingestion** – Loads the website dataset.
 2. **Data Validation** – Validates the dataset using the defined schema.
